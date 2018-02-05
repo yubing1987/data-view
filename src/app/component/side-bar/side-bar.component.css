@@ -1,0 +1,32 @@
+.side-bar-view{
+    width: 100%;
+    height: 100%;
+    background: #2b2b2b;
+}
+
+.side-bar-item{
+    height: 40px;
+    line-height: 40px;
+    padding: 4px 10px;
+    color: #f2f2f2;
+    border-bottom: 1px solid #49473f;
+    outline: none;
+}
+
+.side-bar-item-un-select:hover{
+    background: #555555;
+}
+
+.side-bar-item-select{
+    background: #49473f;
+    cursor: default;
+}
+
+.side-bar-item-un-select{
+    background: #3c3f41;
+    cursor: pointer;
+}
+
+.item-bottom{
+    height: 2px;
+}

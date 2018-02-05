@@ -1,0 +1,17 @@
+.data-view-root{
+    height:100%;
+    clear: both;
+}
+
+.data-view-root>div{
+    float: left;
+    height: 100%;
+}
+
+.data-view-router-panel{
+    width: calc(100% - 200px);
+}
+
+.data-view-side-bar{
+    width: 200px;
+}
