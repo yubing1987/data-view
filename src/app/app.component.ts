@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
     selector: 'app-root',
@@ -7,15 +8,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     items: any = [];
+    itemSelect: any = [];
 
-    constructor() {
+    constructor(private location: Location) {
         this.items.push({
             text: "Grid Heat Map",
-            link: "/heat-map/grid"
+            link: "/heat-map/grid",
+            key: "grid"
         });
         this.items.push({
             text: "Geo Coordinate Map",
-            link: "/heat-map/geo"
+            link: "/heat-map/geo",
+            key: "geo"
+        });
+        this.itemSelect = null;
+        const list = location.path().split("/");
+        this.items.forEach((item) => {
+           if (item.key === list[2]) {
+               this.itemSelect = item;
+           }
         });
     }
 }
