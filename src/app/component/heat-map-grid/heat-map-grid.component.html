@@ -1,6 +1,7 @@
 <div>
+    <div echarts [options] = "chartOption" class="demo-chart"></div>
     <div>
-
+        <input class="y-axis-input" [(ngModel)]="yAxisInput" (change)="optionChange()">
+        <input class="x-axis-input" [(ngModel)]="xAxisInput" (change)="optionChange()">
     </div>
-  heat-map-grid works!
 </div>
